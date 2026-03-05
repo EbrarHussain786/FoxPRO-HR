@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="hero">
+  <h1>Web-Based HR Management System</h1>
+  <p>Centralized, responsive, modern HR operations platform with 13 integrated modules.</p>
+</section>
+
+<section class="grid cards">
+  <article class="card">
+    <h3>Total Employees</h3>
+    <p>{{ metrics.total_employees }}</p>
+  </article>
+  <article class="card">
+    <h3>Today Attendance</h3>
+    <p>{{ metrics.today_attendance }}</p>
+  </article>
+  <article class="card">
+    <h3>Leave Requests</h3>
+    <p>{{ metrics.leave_requests }}</p>
+  </article>
+  <article class="card">
+    <h3>Payroll Summary</h3>
+    <p>{{ metrics.payroll_summary }}</p>
+  </article>
+  <article class="card">
+    <h3>Notifications</h3>
+    <p>{{ metrics.notifications }}</p>
+  </article>
+</section>
+
+<section class="panel">
+  <h2>Employee Dashboard Widgets</h2>
+  <ul>
+    <li>My Attendance: {{ employee_widget.my_attendance }}</li>
+    <li>Leave Balance: Annual {{ employee_widget.leave_balance.annual }}, Sick {{ employee_widget.leave_balance.sick }}, Casual {{ employee_widget.leave_balance.casual }}</li>
+    <li>Latest Payslip: {{ employee_widget.latest_payslip }}</li>
+    <li>Announcements: {{ employee_widget.announcements.0 }}</li>
+  </ul>
+</section>
+
+<section class="panel">
+  <h2>System Modules</h2>
+  <div class="chips">
+    {% for module in modules %}
+      <span class="chip">{{ module }}</span>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

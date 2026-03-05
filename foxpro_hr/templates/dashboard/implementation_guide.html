@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>FoxPRO-HR Step-by-Step Development Guide</h1>
+<div class="panel">
+  <h2>Phase 1: Project Setup</h2>
+  <ol>
+    <li>Create virtual environment and install requirements.</li>
+    <li>Configure Django settings, static/media, authentication model.</li>
+    <li>Create modular apps for each HR domain.</li>
+  </ol>
+
+  <h2>Phase 2: Data Model Layer</h2>
+  <ol>
+    <li>Define all entities in app-specific <code>models.py</code>.</li>
+    <li>Create relationships for HR workflows (employee to attendance/leave/payroll).</li>
+    <li>Run <code>makemigrations</code> and <code>migrate</code>.</li>
+  </ol>
+
+  <h2>Phase 3: Admin + APIs</h2>
+  <ol>
+    <li>Register models in each <code>admin.py</code>.</li>
+    <li>Build CRUD views and REST endpoints per module.</li>
+    <li>Add server-side validation and permissions.</li>
+  </ol>
+
+  <h2>Phase 4: Frontend</h2>
+  <ol>
+    <li>Use <code>templates/base.html</code> for shared layout/navigation.</li>
+    <li>Build dashboards and module pages under <code>templates/dashboard/</code>.</li>
+    <li>Apply modern UI styling in <code>static/css/styles.css</code>.</li>
+  </ol>
+
+  <h2>Phase 5: Core Business Logic</h2>
+  <ul>
+    <li>Attendance late/overtime calculators</li>
+    <li>Leave balance and approval flow</li>
+    <li>Payroll engine and payslip PDF service</li>
+    <li>Recruitment pipeline and interview tracker</li>
+  </ul>
+
+  <h2>Phase 6: Deployment on PythonAnywhere</h2>
+  <ol>
+    <li>Create PythonAnywhere web app (manual Django config).</li>
+    <li>Upload project, set virtualenv, install requirements.</li>
+    <li>Configure WSGI to point to <code>foxpro_hr.wsgi</code>.</li>
+    <li>Set static files mapping and run migrations.</li>
+    <li>Create admin user and reload web app.</li>
+  </ol>
+  <p>See README and deployment guide for exact commands and file locations.</p>
+</div>
+{% endblock %}

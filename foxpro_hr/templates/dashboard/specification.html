@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>FoxPRO-HR Complete Software Specification</h1>
+<div class="panel">
+  <h2>1. Purpose</h2>
+  <p>FoxPRO-HR is a centralized web-based HR platform that automates employee records, attendance, leave, payroll, recruitment, performance, training, documentation, scheduling, analytics, role-based access, notifications, and system configuration to reduce manual work and improve data accuracy in real-time.</p>
+
+  <h2>2. Core Modules</h2>
+  <ol>
+    <li>Employee Management</li><li>Attendance Management</li><li>Leave Management</li><li>Payroll Management</li>
+    <li>Recruitment Management</li><li>Performance Management</li><li>Training & Development</li>
+    <li>Document Management</li><li>Shift & Scheduling</li><li>Reporting & Analytics</li>
+    <li>User Roles & Permission Management</li><li>Notification & Communication</li><li>System Settings & Configuration</li>
+  </ol>
+
+  <h2>3. Functional Requirements by Module</h2>
+  <p><strong>Employee Management:</strong> profile creation, CNIC, address, phone, email, department, designation, joining date, salary, emergency contact, document attachment, status lifecycle.</p>
+  <p><strong>Attendance:</strong> check-in/out, biometric/device input hooks, GPS/device fingerprint, late detection, overtime and reporting.</p>
+  <p><strong>Leave:</strong> annual/sick/casual leaves, balances, request workflow, manager approval and history.</p>
+  <p><strong>Payroll:</strong> salary structures, allowances, deductions, overtime, tax and monthly payslip generation.</p>
+  <p><strong>Recruitment:</strong> job posting, candidate applications, resumes, interview schedules, evaluation and hiring decision.</p>
+  <p><strong>Performance:</strong> KPI tracking, manager reviews, self-assessment and performance reporting.</p>
+  <p><strong>Training:</strong> schedules, courses, enrollments and certification tracking.</p>
+  <p><strong>Documents:</strong> contracts, certificates, policy files, expiry tracking.</p>
+  <p><strong>Scheduling:</strong> shifts, assignments, roster calendar and compliance support.</p>
+  <p><strong>Reporting:</strong> dashboard KPIs, export-ready reports, filter/search and drill-downs.</p>
+  <p><strong>RBAC:</strong> Super Admin, HR Manager, Manager, Employee roles with permissions.</p>
+  <p><strong>Notifications:</strong> leave alerts, payroll ready alerts, announcements via in-app notifications.</p>
+  <p><strong>System Settings:</strong> organization profile, attendance policy, leave policy, tax slabs, payroll cycle and audit logs.</p>
+
+  <h2>4. Database Entities (Implemented)</h2>
+  <p>Employee, Department, Designation, Attendance, Leave_Request, Payroll, Salary_Structure, Recruitment, Candidate, Performance_Review, Training, User, Role, Permission, Notification plus helper entities for document and shift assignments.</p>
+
+  <h2>5. UI/UX Requirements</h2>
+  <p>Responsive mobile-first layout, role-based menus, modern cards, search/filter architecture, transition animations, fast loading screens, and real-time ready notification area.</p>
+
+  <h2>6. Professional Additions (Recommended)</h2>
+  <ul>
+    <li>Audit trail for sensitive actions</li>
+    <li>2FA and password policy enforcement</li>
+    <li>Data backup/restore policy</li>
+    <li>API layer for biometric devices</li>
+    <li>Email/SMS gateway integration</li>
+  </ul>
+</div>
+{% endblock %}
